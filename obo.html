@@ -92,8 +92,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="obo-parser">
-<h1><span class="section-number">3.6. </span>OBO parser<a class="headerlink" href="#obo-parser" title="Link to this heading"></a></h1>
+  <section id="module-pymzml.obo">
+<span id="obo-parser"></span><h1><span class="section-number">3.6. </span>OBO parser<a class="headerlink" href="#module-pymzml.obo" title="Link to this heading"></a></h1>
+<p>Class to parse the obo file and set up the accessions library</p>
+<p>The OBO parser has been designed to convert MS:xxxxx tags to their appropriate
+names. A minimal set of MS accession is used in pymzML, but additional
+accessions can easily be queried.</p>
+<p>The obo translator is used internally to associate names with MS:xxxxxxx tags.</p>
+<p>The OboTranslator Class generates a dictionary and several lookup tables.
+e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymzml.obo</span> <span class="kn">import</span> <span class="n">OboTranslator</span> <span class="k">as</span> <span class="n">OT</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translator</span> <span class="o">=</span> <span class="n">OT</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translator</span><span class="p">[</span><span class="s1">&#39;MS:1000127&#39;</span><span class="p">]</span>
+<span class="go">&#39;centroid mass spectrum&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translator</span><span class="p">[</span><span class="s1">&#39;positive scan&#39;</span><span class="p">]</span>
+<span class="go">{&#39;is_a&#39;: &#39;MS:1000465 ! scan polarity&#39;, &#39;id&#39;: &#39;MS:1000130&#39;, &#39;def&#39;:</span>
+<span class="go">&#39;&quot;Polarity of the scan is positive.&quot; [PSI:MS]&#39;, &#39;name&#39;: &#39;positive scan&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translator</span><span class="p">[</span><span class="s1">&#39;scan&#39;</span><span class="p">]</span>
+<span class="go">{&#39;relationship&#39;: &#39;part_of MS:0000000 ! Proteomics Standards Initiative Mass</span>
+<span class="go">Spectrometry Ontology&#39;, &#39;id&#39;: &#39;MS:1000441&#39;, &#39;def&#39;: &#39;&quot;Function or process of</span>
+<span class="go">the mass spectrometer where it records a spectrum.&quot; [PSI:MS]&#39;, &#39;name&#39;:</span>
+<span class="go">&#39;scan&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translator</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span>
+<span class="go">{&#39;relationship&#39;: &#39;part_of MS:0000000 ! Proteomics Standards Initiative Mass</span>
+<span class="go">Spectrometry Ontology&#39;, &#39;id&#39;: &#39;MS:1000460&#39;, &#39;def&#39;: &#39;&quot;Terms to describe</span>
+<span class="go">units.&quot; [PSI:MS]&#39;, &#39;name&#39;: &#39;unit&#39;}</span>
+</pre></div>
+</div>
+<p>pymzML comes with the queryOBO.py script that can be used to interrogate the
+OBO file. Please refer to <a class="reference internal" href="example_scripts.html#example-scripts"><span class="std std-ref">Example Scripts</span></a> for further usage information.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./example_scripts/queryOBO.py &quot;scan time&quot;
+MS:1000016
+scan time
+&quot;The time taken for an acquisition by scanning analyzers.&quot; [PSI:MS]
+Is a: MS:1000503 ! scan attribute
+$
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./example_scripts/queryOBO.py 1000016
+MS:1000016
+scan time
+&quot;The time taken for an acquisition by scanning analyzers.&quot; [PSI:MS]
+MS:1000503 ! scan attribute
+$
+</pre></div>
+</div>
 <section id="accessing-specific-obo-ms-tags">
 <h2><span class="section-number">3.6.1. </span>Accessing specific OBO MS tags<a class="headerlink" href="#accessing-specific-obo-ms-tags" title="Link to this heading"></a></h2>
 <p>This section describes how to access some common MS tags by their names as they

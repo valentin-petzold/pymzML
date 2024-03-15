@@ -59,22 +59,70 @@
 <li class="toctree-l2"><a class="reference internal" href="index_gzip.html#igzip-file-format-specification">4.5. igzip file format specification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom_fileclass.html">4.6. Implementing an own file class</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.7. Example Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#parsing-a-mzml-file-new-syntax">4.7.1. Parsing a mzML file (new syntax)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parsing-a-mzml-file-old-syntax">4.7.2. Parsing a mzML file (old syntax)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#query-the-obo-files">4.7.3. Query the obo files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plotting-a-chromatogram">4.7.4. Plotting a chromatogram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plotting-a-spectrum">4.7.5. Plotting a spectrum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plotting-a-spectrum-with-annotation">4.7.6. Plotting a spectrum with annotation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extracting-highest-peaks">4.7.7. Extracting highest peaks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compare-spectra">4.7.8. Compare spectra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#find-m-z-values">4.7.9. Find m/z values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extract-ion-chromatogram">4.7.10. Extract ion chromatogram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#find-abundant-precursors">4.7.11. Find abundant precursors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-polarity-of-spectra">4.7.12. Access polarity of spectra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#check-old-to-new-function-name-mapping">4.7.13. Check old to new function name mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#convert-mzml-gz-to-mzml-gz-igzip">4.7.14. Convert mzML(.gz) to mzML.gz (igzip)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#multi-threading-conversion-of-mzml-gz-to-mzml-gz-igzip">4.7.15. Multi threading conversion of mzML(.gz) to mzML.gz (igzip)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#acces-run-infos">4.7.16. Acces run infos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parsing-a-mzml-file-new-syntax">4.7.1. Parsing a mzML file (new syntax)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple_parser.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parsing-a-mzml-file-old-syntax">4.7.2. Parsing a mzML file (old syntax)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple_parser_v2.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#query-the-obo-files">4.7.3. Query the obo files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#queryOBO.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plotting-a-chromatogram">4.7.4. Plotting a chromatogram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot_chromatogram.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plotting-a-spectrum">4.7.5. Plotting a spectrum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot_spectrum.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plotting-a-spectrum-with-annotation">4.7.6. Plotting a spectrum with annotation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot_spectrum_with_annotation.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extracting-highest-peaks">4.7.7. Extracting highest peaks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#highest_peaks.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compare-spectra">4.7.8. Compare spectra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compare_spectra.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#find-m-z-values">4.7.9. Find m/z values</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#has_peak.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extract-ion-chromatogram">4.7.10. Extract ion chromatogram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extract_ion_chromatogram.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#find-abundant-precursors">4.7.11. Find abundant precursors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get_precursors.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#access-polarity-of-spectra">4.7.12. Access polarity of spectra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#polarity.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#check-old-to-new-function-name-mapping">4.7.13. Check old to new function name mapping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#deprecation_check.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#convert-mzml-gz-to-mzml-gz-igzip">4.7.14. Convert mzML(.gz) to mzML.gz (igzip)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gzip_mzml.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-threading-conversion-of-mzml-gz-to-mzml-gz-igzip">4.7.15. Multi threading conversion of mzML(.gz) to mzML.gz (igzip)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#multi_threading_file_compression.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#acces-run-infos">4.7.16. Acces run infos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#access_run_info.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#creating-a-custom-filehandler">4.7.17. Creating a custom Filehandler</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">4.7.17.1. Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#implementation-of-the-api-class">4.7.17.2. Implementation of the API Class</a></li>
@@ -118,6 +166,24 @@
 <span id="id1"></span><h1><span class="section-number">4.7. </span>Example Scripts<a class="headerlink" href="#example-scripts" title="Link to this heading"></a></h1>
 <section id="parsing-a-mzml-file-new-syntax">
 <h2><span class="section-number">4.7.1. </span>Parsing a mzML file (new syntax)<a class="headerlink" href="#parsing-a-mzml-file-new-syntax" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="simple_parser.main">
+<span class="sig-prename descclassname"><span class="pre">simple_parser.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simple_parser.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simple_parser.main" title="Link to this definition"></a></dt>
+<dd><p>Basic example script to demonstrate the usage of pymzML. Requires a mzML
+file as first argument.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./simple_parser.py &lt;path_to_mzml_file&gt;</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This script uses the new syntax with the MS level being a property of
+the spectrum class ( Spectrum.ms_level ). The old syntax can be found in
+the script simple_parser_v2.py where the MS level can be queried as a key
+(Spectrum[‘ms level’])</p>
+</div>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pymzml</span>
@@ -163,6 +229,23 @@
 </section>
 <section id="parsing-a-mzml-file-old-syntax">
 <h2><span class="section-number">4.7.2. </span>Parsing a mzML file (old syntax)<a class="headerlink" href="#parsing-a-mzml-file-old-syntax" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="simple_parser_v2.main">
+<span class="sig-prename descclassname"><span class="pre">simple_parser_v2.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simple_parser_v2.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simple_parser_v2.main" title="Link to this definition"></a></dt>
+<dd><p>Basic example script to demonstrate the usage of pymzML. Requires a mzML
+file as first argument.</p>
+<dl class="simple">
+<dt>usage:</dt><dd><p>./simple_parser_v2.py &lt;path_to_mzml_file&gt;</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This script uses the old syntax where the MS level can be queried as a
+key (Spectrum[‘ms level’]). The current syntax can be found in
+simple_parser.py</p>
+</div>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pymzml</span>
@@ -210,6 +293,32 @@
 </section>
 <section id="query-the-obo-files">
 <h2><span class="section-number">4.7.3. </span>Query the obo files<a class="headerlink" href="#query-the-obo-files" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="queryOBO.main">
+<span class="sig-prename descclassname"><span class="pre">queryOBO.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/queryOBO.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#queryOBO.main" title="Link to this definition"></a></dt>
+<dd><p>Use this script to interrogate the OBO database files.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./queryOBO.py [-h] [-v VERSION] query</p>
+</div></blockquote>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./queryOBO.py&#39;scan time&#39;
+MS:1000016
+scan time
+&#39;The time taken for an acquisition by scanning analyzers.&#39; [PSI:MS]
+Is a: MS:1000503 ! scan attribute
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./queryOBO.py 1000016
+MS:1000016
+scan time
+&quot;The time taken for an acquisition by scanning analyzers.&quot; [PSI:MS]
+MS:1000503 ! scan attribute
+</pre></div>
+</div>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -316,6 +425,17 @@
 </section>
 <section id="plotting-a-chromatogram">
 <h2><span class="section-number">4.7.4. </span>Plotting a chromatogram<a class="headerlink" href="#plotting-a-chromatogram" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="plot_chromatogram.main">
+<span class="sig-prename descclassname"><span class="pre">plot_chromatogram.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot_chromatogram.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot_chromatogram.main" title="Link to this definition"></a></dt>
+<dd><p>Plots a chromatogram for the given mzML file. File is saved as
+‘chromatogram_&lt;mzml_file&gt;.html’.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./plot_chromatogram.py &lt;path_to_mzml_file&gt;</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -359,6 +479,17 @@
 </section>
 <section id="plotting-a-spectrum">
 <h2><span class="section-number">4.7.5. </span>Plotting a spectrum<a class="headerlink" href="#plotting-a-spectrum" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="plot_spectrum.main">
+<span class="sig-prename descclassname"><span class="pre">plot_spectrum.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot_spectrum.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot_spectrum.main" title="Link to this definition"></a></dt>
+<dd><p>This function shows how to plot a simple spectrum. It can be directly
+plotted via this script or using the python console.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./plot_spectrum.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -401,6 +532,23 @@
 </section>
 <section id="plotting-a-spectrum-with-annotation">
 <h2><span class="section-number">4.7.6. </span>Plotting a spectrum with annotation<a class="headerlink" href="#plotting-a-spectrum-with-annotation" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="plot_spectrum_with_annotation.main">
+<span class="sig-prename descclassname"><span class="pre">plot_spectrum_with_annotation.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot_spectrum_with_annotation.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot_spectrum_with_annotation.main" title="Link to this definition"></a></dt>
+<dd><p>This script shows how to plot multiple spectra in one plot and
+how to use label for the annotation of spectra.
+The first plot is an MS1 spectrum with the annotated precursor ion.
+The second plot is a zoom into the precursor isotope pattern.
+The third plot is an annotated fragmentation spectrum (MS2) of the
+peptide HLVDEPQNLIK from BSA.
+These examples also show the use of ‘layout’ to define the appearance
+of a plot.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./plot_spectrum_with_annotation.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -617,6 +765,18 @@
 </section>
 <section id="extracting-highest-peaks">
 <h2><span class="section-number">4.7.7. </span>Extracting highest peaks<a class="headerlink" href="#extracting-highest-peaks" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="highest_peaks.main">
+<span class="sig-prename descclassname"><span class="pre">highest_peaks.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/highest_peaks.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#highest_peaks.main" title="Link to this definition"></a></dt>
+<dd><p>Testscript to isolate the n-highest peaks from an example file.</p>
+<p>Usage:</p>
+<blockquote>
+<div><p>./highest_peaks.py</p>
+</div></blockquote>
+<p>Parses the file ‘../tests/data/example.mzML’ and extracts the 2 highest
+intensities from each spectrum.</p>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">pymzml</span>
@@ -665,6 +825,18 @@
 </section>
 <section id="compare-spectra">
 <h2><span class="section-number">4.7.8. </span>Compare spectra<a class="headerlink" href="#compare-spectra" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="compare_spectra.main">
+<span class="sig-prename descclassname"><span class="pre">compare_spectra.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/compare_spectra.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#compare_spectra.main" title="Link to this definition"></a></dt>
+<dd><p>Compare multiple spectra and return the cosine distance between them.
+The returned value is between 0 and 1, a returned value of 1
+represents highest similarity.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./compare_spectra.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -726,6 +898,16 @@
 </section>
 <section id="find-m-z-values">
 <h2><span class="section-number">4.7.9. </span>Find m/z values<a class="headerlink" href="#find-m-z-values" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="has_peak.main">
+<span class="sig-prename descclassname"><span class="pre">has_peak.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/has_peak.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#has_peak.main" title="Link to this definition"></a></dt>
+<dd><p>Testscript to demonstrate functionality of function <a class="reference internal" href="pymzml_spec.html#pymzml.spec.Spectrum.has_peak" title="pymzml.spec.Spectrum.has_peak"><code class="xref py py-func docutils literal notranslate"><span class="pre">pymzml.spec.Spectrum.has_peak()</span></code></a></p>
+<p>usage:</p>
+<blockquote>
+<div><p>./has_peak.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">pymzml</span>
@@ -760,6 +942,17 @@
 </section>
 <section id="extract-ion-chromatogram">
 <h2><span class="section-number">4.7.10. </span>Extract ion chromatogram<a class="headerlink" href="#extract-ion-chromatogram" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="extract_ion_chromatogram.main">
+<span class="sig-prename descclassname"><span class="pre">extract_ion_chromatogram.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/extract_ion_chromatogram.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#extract_ion_chromatogram.main" title="Link to this definition"></a></dt>
+<dd><p>Demonstration of the extraction of a specific ion chromatogram, i.e. XIC or EIC</p>
+<p>All intensities and m/z values for a target m/z are extracted.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./extract_ion_chromatogram.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -808,6 +1001,17 @@
 </section>
 <section id="find-abundant-precursors">
 <h2><span class="section-number">4.7.11. </span>Find abundant precursors<a class="headerlink" href="#find-abundant-precursors" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="get_precursors.main">
+<span class="sig-prename descclassname"><span class="pre">get_precursors.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_precursors.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#get_precursors.main" title="Link to this definition"></a></dt>
+<dd><p>Extract the 10 most often fragmented precursors from the BSA example file.</p>
+<p>This can e.g. be used for defining exclusion lists for further MS runs.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./get_precursors.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -870,6 +1074,16 @@
 </section>
 <section id="access-polarity-of-spectra">
 <h2><span class="section-number">4.7.12. </span>Access polarity of spectra<a class="headerlink" href="#access-polarity-of-spectra" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="polarity.main">
+<span class="sig-prename descclassname"><span class="pre">polarity.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/polarity.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#polarity.main" title="Link to this definition"></a></dt>
+<dd><p>Accessing positive or negative polarity of scan using obo 1.1.0</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./polarity.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
@@ -919,6 +1133,20 @@
 </section>
 <section id="check-old-to-new-function-name-mapping">
 <h2><span class="section-number">4.7.13. </span>Check old to new function name mapping<a class="headerlink" href="#check-old-to-new-function-name-mapping" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="deprecation_check.main">
+<span class="sig-prename descclassname"><span class="pre">deprecation_check.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/deprecation_check.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#deprecation_check.main" title="Link to this definition"></a></dt>
+<dd><p>Testscript to highlight the function name changes in the Spectrum class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please adjust any old scripts to the new syntax.</p>
+</div>
+<p>usage:</p>
+<blockquote>
+<div><p>./deprecation_check.py</p>
+</div></blockquote>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -965,6 +1193,13 @@
 </section>
 <section id="convert-mzml-gz-to-mzml-gz-igzip">
 <h2><span class="section-number">4.7.14. </span>Convert mzML(.gz) to mzML.gz (igzip)<a class="headerlink" href="#convert-mzml-gz-to-mzml-gz-igzip" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gzip_mzml.main">
+<span class="sig-prename descclassname"><span class="pre">gzip_mzml.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gzip_mzml.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gzip_mzml.main" title="Link to this definition"></a></dt>
+<dd><p>Create and indexed gzip mzML file from a plain mzML.</p>
+<p>Usage: python3 gzip_mzml.py &lt;path/to/mzml&gt; &lt;path/to/output&gt;</p>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3.4</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -999,9 +1234,49 @@
 </section>
 <section id="multi-threading-conversion-of-mzml-gz-to-mzml-gz-igzip">
 <h2><span class="section-number">4.7.15. </span>Multi threading conversion of mzML(.gz) to mzML.gz (igzip)<a class="headerlink" href="#multi-threading-conversion-of-mzml-gz-to-mzml-gz-igzip" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="multi_threading_file_compression.main">
+<span class="sig-prename descclassname"><span class="pre">multi_threading_file_compression.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/multi_threading_file_compression.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#multi_threading_file_compression.main" title="Link to this definition"></a></dt>
+<dd><p>Creates indexed gzip mzML files from all mzMLs files in the given folder
+using a given number of threads.</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>python multi_threading_file_compression.py &lt;folder&gt; &lt;threads&gt;</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the number of threads is larger than the number of actual possible
+threads, all possible threads will be used.</p>
+</div>
+</dd></dl>
+
 </section>
 <section id="acces-run-infos">
 <h2><span class="section-number">4.7.16. </span>Acces run infos<a class="headerlink" href="#acces-run-infos" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="access_run_info.main">
+<span class="sig-prename descclassname"><span class="pre">access_run_info.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/access_run_info.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#access_run_info.main" title="Link to this definition"></a></dt>
+<dd><p>Basic example script to access basic run info of an mzML file. Requires a
+mzML file as first command line argument.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./access_run_info.py &lt;path_to_mzml_file&gt;</p>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">run</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span>
+<span class="go">        {</span>
+<span class="go">            &#39;encoding&#39;: &#39;utf-8&#39;,</span>
+<span class="go">             &#39;file_name&#39;: &#39;/Users/joe/Dev/pymzml_2.0/tests/data/BSA1.mzML.gz&#39;,</span>
+<span class="go">             &#39;file_object&#39;: &lt;pymzml.file_interface.FileInterface object at 0x1039a3f28&gt;,</span>
+<span class="go">             &#39;obo_version&#39;: &#39;1.1.0&#39;,</span>
+<span class="go">             &#39;offset_dict&#39;: None,</span>
+<span class="go">             &#39;run_id&#39;: &#39;ru_0&#39;,</span>
+<span class="go">             &#39;spectrum_count&#39;: 1684,</span>
+<span class="go">             &#39;start_time&#39;: &#39;2009-08-09T22:32:31&#39;</span>
+<span class="go">         }</span>
+</pre></div>
+</div>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pymzml</span>

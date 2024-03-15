@@ -51,7 +51,17 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">2. Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">3. pymzML module content</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Main reader interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Main reader interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pymzml.run.Reader"><code class="docutils literal notranslate"><span class="pre">Reader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pymzml.run.Reader.__getitem__"><code class="docutils literal notranslate"><span class="pre">Reader.__getitem__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymzml.run.Reader.file_class"><code class="docutils literal notranslate"><span class="pre">Reader.file_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymzml.run.Reader.get_chromatogram_count"><code class="docutils literal notranslate"><span class="pre">Reader.get_chromatogram_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymzml.run.Reader.get_spectrum_count"><code class="docutils literal notranslate"><span class="pre">Reader.get_spectrum_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymzml.run.Reader.next"><code class="docutils literal notranslate"><span class="pre">Reader.next()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="pymzml_spec.html">3.2. Spectrum and Chromatogram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pymzml_utils.html">3.3. Utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot.html">3.4. Plotting functions</a></li>
@@ -89,8 +99,110 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="main-reader-interface">
-<h1><span class="section-number">3.1. </span>Main reader interface<a class="headerlink" href="#main-reader-interface" title="Link to this heading"></a></h1>
+  <section id="module-pymzml.run">
+<span id="main-reader-interface"></span><h1><span class="section-number">3.1. </span>Main reader interface<a class="headerlink" href="#module-pymzml.run" title="Link to this heading"></a></h1>
+<p>The class <a class="reference internal" href="#pymzml.run.Reader" title="pymzml.run.Reader"><code class="xref py py-class docutils literal notranslate"><span class="pre">Reader</span></code></a> has been designed to selectively extract data
+from a mzML file and to expose the data as a python object.
+Necessary information are read in and stored in a fast
+accessible format.
+The reader itself is an iterator, thus looping over all spectra
+follows the classical pythonian syntax.
+Additionally one can random access spectra by their nativeID
+if the file if not truncated by a conversion Program.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The class <code class="xref py py-class docutils literal notranslate"><span class="pre">Writer</span></code> is still in development.</p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymzml.run.Reader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.run.</span></span><span class="sig-name descname"><span class="pre">Reader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_or_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MS_precisions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obo_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_index_from_scratch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_chromatogram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_regex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader" title="Link to this definition"></a></dt>
+<dd><p>Initialize Reader object for a given mzML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to the mzml file to parse.</p>
+</dd>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>MS_precisions</strong> (<em>dict</em>) – <p>measured precisions for the different MS levels.
+e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="mi">1</span> <span class="p">:</span> <span class="mf">5e-6</span><span class="p">,</span>
+    <span class="mi">2</span> <span class="p">:</span> <span class="mf">20e-6</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>obo_version</strong> (<em>str</em><em>, </em><em>optional</em>) – obo version number as string. If not
+specified the version will be extracted from the mzML file</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting the precision for MS1 and MSn spectra has changed in version 1.2.
+However, the old syntax as kwargs is still compatible ( e.g. ‘MS1_Precision=5e-6’).</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pymzml.run.Reader.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader.__getitem__" title="Link to this definition"></a></dt>
+<dd><p>Access spectrum with native id ‘identifier’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em><em> or </em><em>int</em>) – last number in the id tag of the spectrum
+element</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectrum/chromatogram object
+with native id ‘identifier’</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>spectrum (<a class="reference internal" href="pymzml_spec.html#pymzml.spec.Spectrum" title="pymzml.spec.Spectrum">Spectrum</a> or <a class="reference internal" href="pymzml_spec.html#pymzml.spec.Chromatogram" title="pymzml.spec.Chromatogram">Chromatogram</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pymzml.run.Reader.file_class">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_class</span></span><a class="headerlink" href="#pymzml.run.Reader.file_class" title="Link to this definition"></a></dt>
+<dd><p>Return file object in use.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymzml.run.Reader.get_chromatogram_count">
+<span class="sig-name descname"><span class="pre">get_chromatogram_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader.get_chromatogram_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader.get_chromatogram_count" title="Link to this definition"></a></dt>
+<dd><p>Number of chromatograms in file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of chromatograms in file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>chromatogram count (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymzml.run.Reader.get_spectrum_count">
+<span class="sig-name descname"><span class="pre">get_spectrum_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader.get_spectrum_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader.get_spectrum_count" title="Link to this definition"></a></dt>
+<dd><p>Number of spectra in file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of spectra in file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>spectrum count (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymzml.run.Reader.next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader.next"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader.next" title="Link to this definition"></a></dt>
+<dd><p>Function to return the next Spectrum element.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

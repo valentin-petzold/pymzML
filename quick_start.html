@@ -88,6 +88,24 @@
 <span id="id1"></span><h1><span class="section-number">2. </span>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
 <section id="parsing-a-mzml-file-and-setting-measured-precision">
 <h2><span class="section-number">2.1. </span>Parsing a mzML file and setting measured precision<a class="headerlink" href="#parsing-a-mzml-file-and-setting-measured-precision" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">simple_parser.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mzml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simple_parser.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Basic example script to demonstrate the usage of pymzML. Requires a mzML
+file as first argument.</p>
+<p>usage:</p>
+<blockquote>
+<div><p>./simple_parser.py &lt;path_to_mzml_file&gt;</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This script uses the new syntax with the MS level being a property of
+the spectrum class ( Spectrum.ms_level ). The old syntax can be found in
+the script simple_parser_v2.py where the MS level can be queried as a key
+(Spectrum[‘ms level’])</p>
+</div>
+</dd></dl>
+
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pymzml</span>

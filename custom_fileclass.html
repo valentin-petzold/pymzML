@@ -191,7 +191,7 @@ One obvious optimization would be, to read in smaller chunks of a spec string an
 <h2><span class="section-number">4.6.2. </span>Enabling the wrapper<a class="headerlink" href="#enabling-the-wrapper" title="Link to this heading"></a></h2>
 <p>In order to allow pymzML to use this new file class, the filehandler needs to be able to detect when to use this class.
 The easiest way is, to add another elif statement which decides which handler to use based on the file path.
-For this, edit the <code class="xref py py-func docutils literal notranslate"><span class="pre">_open()</span></code> method as shown in the following:</p>
+For this, edit the <a class="reference internal" href="file_handlers.html#pymzml.file_interface.FileInterface._open" title="pymzml.file_interface.FileInterface._open"><code class="xref py py-func docutils literal notranslate"><span class="pre">_open()</span></code></a> method as shown in the following:</p>
 <p>Code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
