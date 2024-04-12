@@ -16,7 +16,7 @@ jobs:
       - name: Install and Build HTML
         run: |
           pip install --upgrade pip
-          pip install docs/requirements.txt
+          pip install -r docs/requirements.txt
           pip install ".[full]"
           sphinx-build ./docs/source ./docs/build
 
