@@ -2,11 +2,9 @@
 name: Build Sphinx docu.
 
 on:
-  pull_request
+  [push]
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
