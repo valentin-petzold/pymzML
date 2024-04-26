@@ -4,7 +4,8 @@ name: Build Sphinx docu.
 on:
   pull_request
 permissions:
-  contents: write
+  contents: read
+  pages: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
