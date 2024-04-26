@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.1. Main reader interface &mdash; pymzML 2.5.3 documentation</title>
+  <title>3.1. Main reader interface &mdash; pymzML 2.5.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0bbe9fa5"></script>
+        <script src="_static/documentation_options.js?v=bbada2d9"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             pymzML
           </a>
               <div class="version">
-                2.5.3
+                2.5.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -142,6 +142,35 @@ specified the version will be extracted from the mzML file</p></li>
 <p>Setting the precision for MS1 and MSn spectra has changed in version 1.2.
 However, the old syntax as kwargs is still compatible ( e.g. ‘MS1_Precision=5e-6’).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#pymzml.run.Reader.file_class" title="pymzml.run.Reader.file_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_class</span></code></a></dt><dd><p>Return file object in use.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.run.Reader.get_chromatogram_count" title="pymzml.run.Reader.get_chromatogram_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_chromatogram_count</span></code></a>()</p></td>
+<td><p>Number of chromatograms in file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.run.Reader.get_spectrum_count" title="pymzml.run.Reader.get_spectrum_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_spectrum_count</span></code></a>()</p></td>
+<td><p>Number of spectra in file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.run.Reader.next" title="pymzml.run.Reader.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a>()</p></td>
+<td><p>Function to return the next Spectrum element.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>close</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.run.Reader.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/run.html#Reader.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.run.Reader.__getitem__" title="Link to this definition"></a></dt>

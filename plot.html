@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.4. Plotting functions &mdash; pymzML 2.5.3 documentation</title>
+  <title>3.4. Plotting functions &mdash; pymzML 2.5.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0bbe9fa5"></script>
+        <script src="_static/documentation_options.js?v=bbada2d9"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             pymzML
           </a>
               <div class="version">
-                2.5.3
+                2.5.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -109,7 +109,30 @@ The data can be visualized as an interactive plotly plot or be exported as JSON.
 <dl class="py class">
 <dt class="sig sig-object py" id="pymzml.plot.Factory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.plot.</span></span><span class="sig-name descname"><span class="pre">Factory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/plot.html#Factory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.plot.Factory" title="Link to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.plot.Factory.add" title="pymzml.plot.Factory.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a>(data[, color, style, mz_range, ...])</p></td>
+<td><p>Add data to the graph.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.plot.Factory.get_data" title="pymzml.plot.Factory.get_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data</span></code></a>()</p></td>
+<td><p>Return data and layout in JSON format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.plot.Factory.info" title="pymzml.plot.Factory.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info</span></code></a>()</p></td>
+<td><p>Prints summary about the plotting factory, i.e. how many plots and how many datasets per plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.plot.Factory.newPlot" title="pymzml.plot.Factory.newPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">newPlot</span></code></a>([MS_precision, title])</p></td>
+<td><p>Deprecated since version 1.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.plot.Factory.new_plot" title="pymzml.plot.Factory.new_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_plot</span></code></a>([MS_precision, title])</p></td>
+<td><p>Add new plot to the plotting Factory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.plot.Factory.save" title="pymzml.plot.Factory.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([filename, mz_range, int_range, ...])</p></td>
+<td><p>Saves all plots and their data points that have been added to the plotFactory.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
 <dt class="sig sig-object py" id="pymzml.plot.Factory.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/plot.html#Factory.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.plot.Factory.__init__" title="Link to this definition"></a></dt>
 <dd><p>Interface to visualize m/z or profile data using plotly (<a class="reference external" href="https://plot.ly/">https://plot.ly/</a>).</p>

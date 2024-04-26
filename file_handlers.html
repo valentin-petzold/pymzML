@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.5. File Access &mdash; pymzML 2.5.3 documentation</title>
+  <title>3.5. File Access &mdash; pymzML 2.5.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0bbe9fa5"></script>
+        <script src="_static/documentation_options.js?v=bbada2d9"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             pymzML
           </a>
               <div class="version">
-                2.5.3
+                2.5.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -113,6 +113,14 @@ An explanation of how to implement your own file class can be found in the advan
 <dt class="sig sig-object py" id="pymzml.file_interface.FileInterface">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.file_interface.</span></span><span class="sig-name descname"><span class="pre">FileInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_index_from_scratch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_regex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_interface.html#FileInterface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_interface.FileInterface" title="Link to this definition"></a></dt>
 <dd><p>Interface to different mzML formats.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.file_interface.FileInterface.read" title="pymzml.file_interface.FileInterface.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>([size])</p></td>
+<td><p>Read binary data from file handler.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.file_interface.FileInterface.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_interface.html#FileInterface.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_interface.FileInterface.__getitem__" title="Link to this definition"></a></dt>
@@ -212,7 +220,25 @@ based on the file ending of ‘path’</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pymzml.file_classes.standardMzml.StandardMzml">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.file_classes.standardMzml.</span></span><span class="sig-name descname"><span class="pre">StandardMzml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_index_from_scratch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_regex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/standardMzml.html#StandardMzml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.standardMzml.StandardMzml" title="Link to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.file_classes.standardMzml.StandardMzml.read" title="pymzml.file_classes.standardMzml.StandardMzml.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>([size])</p></td>
+<td><p>Read binary data from file handler.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>get_binary_file_handler</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>get_file_handler</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
 <dt class="sig sig-object py" id="pymzml.file_classes.standardMzml.StandardMzml.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/standardMzml.html#StandardMzml.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.standardMzml.StandardMzml.__getitem__" title="Link to this definition"></a></dt>
 <dd><p>Access the item with id ‘identifier’.</p>
@@ -346,7 +372,22 @@ seeking to a particular offset for the file.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pymzml.file_classes.standardGzip.StandardGzip">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.file_classes.standardGzip.</span></span><span class="sig-name descname"><span class="pre">StandardGzip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/standardGzip.html#StandardGzip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.standardGzip.StandardGzip" title="Link to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.file_classes.standardGzip.StandardGzip.read" title="pymzml.file_classes.standardGzip.StandardGzip.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>([size])</p></td>
+<td><p>Read binary data from file handler.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>close</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
 <dt class="sig sig-object py" id="pymzml.file_classes.standardGzip.StandardGzip.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/standardGzip.html#StandardGzip.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.standardGzip.StandardGzip.__getitem__" title="Link to this definition"></a></dt>
 <dd><p>Access the item with id ‘identifier’ in the file by iterating the xml-tree.</p>
@@ -408,7 +449,15 @@ seeking to a particular offset for the file.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pymzml.file_classes.indexedGzip.IndexedGzip">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.file_classes.indexedGzip.</span></span><span class="sig-name descname"><span class="pre">IndexedGzip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/indexedGzip.html#IndexedGzip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.indexedGzip.IndexedGzip" title="Link to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.file_classes.indexedGzip.IndexedGzip.read" title="pymzml.file_classes.indexedGzip.IndexedGzip.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>([size])</p></td>
+<td><p>Read binary data from file handler.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
 <dt class="sig sig-object py" id="pymzml.file_classes.indexedGzip.IndexedGzip.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/file_classes/indexedGzip.html#IndexedGzip.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.file_classes.indexedGzip.IndexedGzip.__getitem__" title="Link to this definition"></a></dt>
 <dd><p>Access the item with id ‘identifier’ in the file.</p>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.3. Utils &mdash; pymzML 2.5.3 documentation</title>
+  <title>3.3. Utils &mdash; pymzML 2.5.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0bbe9fa5"></script>
+        <script src="_static/documentation_options.js?v=bbada2d9"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             pymzML
           </a>
               <div class="version">
-                2.5.3
+                2.5.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -119,7 +119,26 @@ be between 1 and 255</p></li>
 <li><p><strong>output_path</strong> (<em>str</em>) – path to the output file</p></li>
 </ul>
 </dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference internal" href="#pymzml.utils.GSGW.GSGW.encoding" title="pymzml.utils.GSGW.GSGW.encoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encoding</span></code></a></dt><dd><p>Returns the encoding used for this file</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.utils.GSGW.GSGW.file_out" title="pymzml.utils.GSGW.GSGW.file_out"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_out</span></code></a></dt><dd><p>Output filehandler</p>
+</dd>
 </dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.utils.GSGW.GSGW.add_data" title="pymzml.utils.GSGW.GSGW.add_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_data</span></code></a>(data, identifier)</p></td>
+<td><p>Create a new gzip member with compressed 'data' indexed with 'index'.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.utils.GSGW.GSGW.write_index" title="pymzml.utils.GSGW.GSGW.write_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_index</span></code></a>()</p></td>
+<td><p>Only called after all the data is written, i.e. all calls to <a class="reference internal" href="#pymzml.utils.GSGW.GSGW.add_data" title="pymzml.utils.GSGW.GSGW.add_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_data()</span></code></a> have been done.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.utils.GSGW.GSGW._allocate_index_bytes">
 <span class="sig-name descname"><span class="pre">_allocate_index_bytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/utils/GSGW.html#GSGW._allocate_index_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.utils.GSGW.GSGW._allocate_index_bytes" title="Link to this definition"></a></dt>
@@ -234,6 +253,20 @@ written with the <a class="reference internal" href="#pymzml.utils.GSGW.GSGW" ti
 <dd class="field-odd"><p><strong>file</strong> (<em>str</em>) – path to file to read</p>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.utils.GSGR.GSGR.read" title="pymzml.utils.GSGR.GSGR.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>([size])</p></td>
+<td><p>Read the content of the in File in binary mode</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.utils.GSGR.GSGR.read_block" title="pymzml.utils.GSGR.GSGR.read_block"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_block</span></code></a>(index)</p></td>
+<td><p>Read and return the data block with the unique index <cite>index</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.utils.GSGR.GSGR.seek" title="pymzml.utils.GSGR.GSGR.seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seek</span></code></a>(offset)</p></td>
+<td><p>Seek to byte offset in input file.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.utils.GSGR.GSGR._check_magic_bytes">
 <span class="sig-name descname"><span class="pre">_check_magic_bytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/utils/GSGR.html#GSGR._check_magic_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.utils.GSGR.GSGR._check_magic_bytes" title="Link to this definition"></a></dt>

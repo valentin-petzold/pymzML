@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Spectrum and Chromatogram &mdash; pymzML 2.5.3 documentation</title>
+  <title>3.2. Spectrum and Chromatogram &mdash; pymzML 2.5.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=0bbe9fa5"></script>
+        <script src="_static/documentation_options.js?v=bbada2d9"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             pymzML
           </a>
               <div class="version">
-                2.5.3
+                2.5.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -131,7 +131,139 @@ with profile data (time, intensity) in an total ion chromatogram.</p>
 <dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>measured_precision</strong> (<em>float</em>) – in ppm, i.e. 5e-6 equals to 5 ppm.</p>
 </dd>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.ID" title="pymzml.spec.Spectrum.ID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ID</span></code></a></dt><dd><p>Access the native id (last number in the id attribute) of the spectrum.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.TIC" title="pymzml.spec.Spectrum.TIC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TIC</span></code></a></dt><dd><p>Property to access the total ion current for this spectrum.</p>
+</dd>
+<dt><strong>centroidedPeaks</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.i" title="pymzml.spec.Spectrum.i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">i</span></code></a></dt><dd><p>Returns the list of the intensity values.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.id_dict" title="pymzml.spec.Spectrum.id_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_dict</span></code></a></dt><dd><p>Access to all entries stored the id attribute of a spectrum.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.index" title="pymzml.spec.Spectrum.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a></dt><dd><p>Access the index of the spectrum.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.measured_precision" title="pymzml.spec.Spectrum.measured_precision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measured_precision</span></code></a></dt><dd><p>Sets the measured and internal precision</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.ms_level" title="pymzml.spec.Spectrum.ms_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ms_level</span></code></a></dt><dd><p>Property to access the ms level.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.mz" title="pymzml.spec.Spectrum.mz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mz</span></code></a></dt><dd><p>Returns the list of m/z values.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.precursors" title="pymzml.spec.Spectrum.precursors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">precursors</span></code></a></dt><dd><p>List the precursor information of this spectrum, if available.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.scan_time" title="pymzml.spec.Spectrum.scan_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_time</span></code></a></dt><dd><p>Property to access the retention time and retention time unit.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.selected_precursors" title="pymzml.spec.Spectrum.selected_precursors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected_precursors</span></code></a></dt><dd><p>Property to access the selected precursors of a MS2 spectrum.</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.t_mz_set" title="pymzml.spec.Spectrum.t_mz_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_mz_set</span></code></a></dt><dd><p>Creates a set of integers out of transformed m/z values (including all values in the defined imprecision).</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.transformed_mz_with_error" title="pymzml.spec.Spectrum.transformed_mz_with_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformed_mz_with_error</span></code></a></dt><dd><p>Returns transformed m/z value with error</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Spectrum.transformed_peaks" title="pymzml.spec.Spectrum.transformed_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformed_peaks</span></code></a></dt><dd><p>m/z value is multiplied by the internal precision.</p>
+</dd>
 </dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.estimated_noise_level" title="pymzml.spec.Spectrum.estimated_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimated_noise_level</span></code></a>([mode])</p></td>
+<td><p>Calculates noise threshold for function remove_noise.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.extreme_values" title="pymzml.spec.Spectrum.extreme_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extreme_values</span></code></a>(key)</p></td>
+<td><p>Find extreme values, minimal and maximum m/z and intensity</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.get" title="pymzml.spec.Spectrum.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(acc[, default])</p></td>
+<td><p>Mimic dicts get function.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_name</span></code>(name)</p></td>
+<td><p>Get element from the original tree by it's unit name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_path</span></code>(hooks)</p></td>
+<td><p>Find elements in spectrum by its path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.has_overlapping_peak" title="pymzml.spec.Spectrum.has_overlapping_peak"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_overlapping_peak</span></code></a>(mz)</p></td>
+<td><p>Checks if a spectrum has more than one peak for a given m/z value and within the measured precision</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.has_peak" title="pymzml.spec.Spectrum.has_peak"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_peak</span></code></a>(mz2find)</p></td>
+<td><p>Checks if a Spectrum has a certain peak.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.highest_peaks" title="pymzml.spec.Spectrum.highest_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">highest_peaks</span></code></a>(n)</p></td>
+<td><p>Function to retrieve the n-highest centroided peaks of the spectrum.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.peaks" title="pymzml.spec.Spectrum.peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">peaks</span></code></a>(peak_type)</p></td>
+<td><p>Decode and return a list of mz/i tuples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.ppm2abs" title="pymzml.spec.Spectrum.ppm2abs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ppm2abs</span></code></a>(value, ppm_value[, direction, factor])</p></td>
+<td><p>Returns the value plus (or minus, dependent on direction) the error (measured precision ) for this value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.reduce" title="pymzml.spec.Spectrum.reduce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce</span></code></a>([peak_type, mz_range])</p></td>
+<td><p>Remove all m/z values outside the given range.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.remove_noise" title="pymzml.spec.Spectrum.remove_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_noise</span></code></a>([mode, noise_level, ...])</p></td>
+<td><p>Function to remove noise from peaks, centroided peaks and reprofiled peaks.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.scan_time_in_minutes" title="pymzml.spec.Spectrum.scan_time_in_minutes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_time_in_minutes</span></code></a>()</p></td>
+<td><p>Property to access the retention time in minutes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.set_peaks" title="pymzml.spec.Spectrum.set_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_peaks</span></code></a>(peaks, peak_type)</p></td>
+<td><p>Assign a custom peak array of type peak_type</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.similarity_to" title="pymzml.spec.Spectrum.similarity_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">similarity_to</span></code></a>(spec2[, round_precision])</p></td>
+<td><p>Compares two spectra and returns cosine</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_string</span></code>([encoding, method])</p></td>
+<td><p>Return string representation of the xml element the spectrum was initialized with.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Spectrum.transform_mz" title="pymzml.spec.Spectrum.transform_mz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mz</span></code></a>(value)</p></td>
+<td><p>pymzml uses an internal precision for different tasks.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>deprecation_warning</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>estimatedNoiseLevel</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>extremeValues</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>get_all_arrays_in_spec</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>get_array</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>get_tims_tof_ion_mobility</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>hasOverlappingPeak</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>hasPeak</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>highestPeaks</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>removeNoise</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>remove_precursor_peak</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>similarityTo</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>transformMZ</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.spec.Spectrum.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accession</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/spec.html#Spectrum.__getitem__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.spec.Spectrum.__getitem__" title="Link to this definition"></a></dt>
@@ -791,6 +923,38 @@ to integers.</p>
 <dt class="sig sig-object py" id="pymzml.spec.Chromatogram">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.spec.</span></span><span class="sig-name descname"><span class="pre">Chromatogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5e-06</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obo_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/spec.html#Chromatogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.spec.Chromatogram" title="Link to this definition"></a></dt>
 <dd><p>Class for Chromatogram access and handling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ID</strong></dt><dd></dd>
+<dt><strong>i</strong></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">measured_precision</span></code></dt><dd><p>Set the measured and internal precision.</p>
+</dd>
+<dt><strong>mz</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#pymzml.spec.Chromatogram.profile" title="pymzml.spec.Chromatogram.profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profile</span></code></a></dt><dd><p>Returns the list of peaks of the chromatogram as tuples (time, intensity).</p>
+</dd>
+<dt><a class="reference internal" href="#pymzml.spec.Chromatogram.time" title="pymzml.spec.Chromatogram.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a></dt><dd><p>Returns the list of time values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_name</span></code>(name)</p></td>
+<td><p>Get element from the original tree by it's unit name.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_path</span></code>(hooks)</p></td>
+<td><p>Find elements in spectrum by its path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.Chromatogram.peaks" title="pymzml.spec.Chromatogram.peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">peaks</span></code></a>()</p></td>
+<td><p>Return the list of peaks of the spectrum as tuples (time, intensity).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_string</span></code>([encoding, method])</p></td>
+<td><p>Return string representation of the xml element the spectrum was initialized with.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.spec.Chromatogram.peaks">
 <span class="sig-name descname"><span class="pre">peaks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/spec.html#Chromatogram.peaks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.spec.Chromatogram.peaks" title="Link to this definition"></a></dt>
@@ -886,6 +1050,28 @@ intensity tuples at same time.</p>
 <dt class="sig sig-object py" id="pymzml.spec.MS_Spectrum">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymzml.spec.</span></span><span class="sig-name descname"><span class="pre">MS_Spectrum</span></span><a class="reference internal" href="_modules/pymzml/spec.html#MS_Spectrum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.spec.MS_Spectrum" title="Link to this definition"></a></dt>
 <dd><p>General spectrum class for data handling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#pymzml.spec.MS_Spectrum.measured_precision" title="pymzml.spec.MS_Spectrum.measured_precision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measured_precision</span></code></a></dt><dd><p>Set the measured and internal precision.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.MS_Spectrum.get_element_by_name" title="pymzml.spec.MS_Spectrum.get_element_by_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_name</span></code></a>(name)</p></td>
+<td><p>Get element from the original tree by it's unit name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pymzml.spec.MS_Spectrum.get_element_by_path" title="pymzml.spec.MS_Spectrum.get_element_by_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_by_path</span></code></a>(hooks)</p></td>
+<td><p>Find elements in spectrum by its path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pymzml.spec.MS_Spectrum.to_string" title="pymzml.spec.MS_Spectrum.to_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_string</span></code></a>([encoding, method])</p></td>
+<td><p>Return string representation of the xml element the spectrum was initialized with.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pymzml.spec.MS_Spectrum.get_element_by_name">
 <span class="sig-name descname"><span class="pre">get_element_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pymzml/spec.html#MS_Spectrum.get_element_by_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pymzml.spec.MS_Spectrum.get_element_by_name" title="Link to this definition"></a></dt>
