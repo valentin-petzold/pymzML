@@ -2,8 +2,7 @@
 name: Build Sphinx docu.
 
 on:
-  release:
-    types: [published]
+  [pull_request]
 permissions:
   contents: write
 jobs:
