@@ -904,9 +904,9 @@ class Spectrum(MS_Spectrum):
             scan_time_ele = self.element.find(
                 ".//*[@accession='MS:1000016']".format(ns=self.ns)
             )
-			if scan_time_ele is not None:
-				self._scan_time = float(scan_time_ele.attrib.get("value"))
-				self._scan_time_unit = scan_time_ele.get("unitName", "unicorns")
+            if scan_time_ele is not None:
+                self._scan_time = float(scan_time_ele.attrib.get("value"))
+                self._scan_time_unit = scan_time_ele.get("unitName", "unicorns")
         return self._scan_time, self._scan_time_unit
 
     # @property
