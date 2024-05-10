@@ -1,4 +1,4 @@
-sphinx==7.2.5
-sphinx_rtd_theme==2.0.0
+sphinx
+sphinx_rtd_theme
 regex
 numpydoc==1.7.0
