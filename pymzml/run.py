@@ -131,8 +131,8 @@ class Reader(object):
             # obo version not specified -> try to identify from mzML by self._init_iter
             self.info["obo_version"] = None
 
-        self.iter = self._init_iter()
         self.OT = self._init_obo_translator()
+        self.iter = self._init_iter()
 
     def __next__(self):
         """
@@ -295,6 +295,8 @@ class Reader(object):
             2017: "4.1.0",
             2018: "4.1.10",
             2019: "4.1.22",
+            2024: "4.1.79",
+            2025: "4.1.188"
         }
         version_fixed = None
         if obo_rgx.match(version):
@@ -343,8 +345,8 @@ class Reader(object):
         # parse obo, check MS tags and if they are ok in minimum.py (minimum
         # required) ...
         if self.info.get("obo_version", None) is None:
-            self.info["obo_version"] = "1.1.0"
-        obo_translator = obo.OboTranslator.from_cache(version=self.info["obo_version"])
+            self.info["obo_version"] = "4.1.79"
+        obo_translator = obo.OboTranslator(version=self.info["obo_version"])
 
         return obo_translator
 
@@ -403,6 +405,9 @@ class Reader(object):
             elif element.tag.endswith("}dataProcessingList"):
                 self.info["data_processing_list"] = True
                 self.info["data_processing_list_element"] = element
+            elif element.tag.endswith("}cvParam"):
+                if self.term_is_a_member(element.attrib.get('accession'), "MS:1000494"):
+                    self.info["instrument_name"] = element.attrib.get('name')
 
             elif element.tag.endswith("}spectrumList"):
                 spec_cnt = element.attrib.get("count")
@@ -452,6 +457,23 @@ class Reader(object):
 
     def close(self):
         self.info["file_object"].close()
+
+    def term_is_a_member(self, tested_term, member_of_term):
+        """
+        Use translated obo file to check if given term is_a member of the
+
+        Returns:
+            is_member (bool) whether given term is a member of member_of_term
+
+        """
+        is_member = False
+        try:
+            term_in = self.OT[tested_term]
+            if term_in:
+                is_member = self.OT.id[tested_term]['is_a'].startswith(member_of_term)
+        except KeyError:
+            print(f'term not found ({tested_term})')
+        return is_member
 
 
 if __name__ == "__main__":
