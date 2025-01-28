@@ -346,7 +346,7 @@ class Reader(object):
         # required) ...
         if self.info.get("obo_version", None) is None:
             self.info["obo_version"] = "4.1.79"
-        obo_translator = obo.OboTranslator(version=self.info["obo_version"])
+        obo_translator = obo.OboTranslator.from_cache(version=self.info["obo_version"])
 
         return obo_translator
 
