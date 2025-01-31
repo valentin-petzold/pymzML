@@ -84,7 +84,7 @@ class Reader(object):
         build_index_from_scratch=False,
         skip_chromatogram=True,
         index_regex=None,
-        **kwargs
+        **kwargs,
     ):
         """Initialize and set required attributes."""
         self.index_regex = index_regex
@@ -296,7 +296,7 @@ class Reader(object):
             2018: "4.1.10",
             2019: "4.1.22",
             2024: "4.1.79",
-            2025: "4.1.188"
+            2025: "4.1.188",
         }
         version_fixed = None
         if obo_rgx.match(version):
@@ -406,8 +406,8 @@ class Reader(object):
                 self.info["data_processing_list"] = True
                 self.info["data_processing_list_element"] = element
             elif element.tag.endswith("}cvParam"):
-                if self.term_is_a_member(element.attrib.get('accession'), "MS:1000494"):
-                    self.info["instrument_name"] = element.attrib.get('name')
+                if self.term_is_a_member(element.attrib.get("accession"), "MS:1000494"):
+                    self.info["instrument_name"] = element.attrib.get("name")
 
             elif element.tag.endswith("}spectrumList"):
                 spec_cnt = element.attrib.get("count")
@@ -470,9 +470,9 @@ class Reader(object):
         try:
             term_in = self.OT[tested_term]
             if term_in:
-                is_member = self.OT.id[tested_term]['is_a'].startswith(member_of_term)
+                is_member = self.OT.id[tested_term]["is_a"].startswith(member_of_term)
         except KeyError:
-            print(f'term not found ({tested_term})')
+            print(f"term not found ({tested_term})")
         return is_member
 
 
