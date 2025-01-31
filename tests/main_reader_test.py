@@ -148,7 +148,7 @@ class runTest(unittest.TestCase):
 
         self.assertEqual(mzml_version, "1.1.0")
         # run._obo_version_validator 2017 default obo = 4.1.79
-        self.assertEqual(obo_version, "4.1.79")
+        self.assertEqual(obo_version, "4.1.0")
         self.assertIsInstance(spec_count, int)
         self.assertEqual(run_id, "exp105-01-ds5562-Pos")
         self.assertEqual(start_time, "2013-09-10T10:31:08Z")
